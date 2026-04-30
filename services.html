@@ -3,94 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07131f" />
+  <meta name="theme-color" content="#0ea5e9" />
   <title>Services | Gaxon Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-current="services">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body>
   <header class="site-header">
-    <div class="container header-shell">
-      <a class="brand" href="index.html" aria-label="Gaxon Energy home"><span class="brand-text">GAXON <span>Energy</span></span></a>
-      <nav class="nav" data-nav>
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></button>
-        <div class="nav-links">
-          <a data-nav-link data-page="home" href="index.html">Home</a>
-          <a data-nav-link data-page="about" href="about.html">About</a>
-          <a data-nav-link data-page="services" href="services.html">Services</a>
-          <a data-nav-link data-page="projects" href="projects.html">Projects</a>
-          <a data-nav-link data-page="team" href="team.html">Team</a>
-          <a data-nav-link data-page="contact" href="contact.html">Contact</a>
-        </div>
-        <a class="nav-cta" href="contact.html">Get in Touch</a>
+    <div class="container header-container">
+      <a class="brand" href="index.html" aria-label="Gaxon Energy Home">
+        GAXON <span>ENERGY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <a class="nav-cta" href="contact.html">Get in Touch</a>
     </div>
   </header>
 
   <main id="content">
-    <section class="page-hero">
-      <div class="container reveal">
-        <span class="eyebrow">Services</span>
-        <h1>End-to-end independent power development.</h1>
-        <p class="split-note">Gaxon manages the full project lifecycle — from initial energy audit and feasibility through to construction, commissioning, and long-term operations. Our clients receive a single accountable partner across every phase.</p>
+    <section class="hero reveal">
+      <div class="bg-pattern-grid" style="position: absolute; inset: 0; opacity: 0.3;"></div>
+      <div class="shape-blob animate-float" style="top: -100px; right: -100px; width: 400px; height: 400px; opacity: 0.1;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Our Expertise</span>
+          <h1>Powering Nigeria's industrial future.</h1>
+          <p>Gaxon Energy manages the full project lifecycle — from initial energy audit and feasibility through to construction, commissioning, and long-term operations.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid-2">
-        <article class="service-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&q=80" alt="Gas-fired power equipment and industrial pipelines" loading="lazy" />
+    <section class="section bg-pattern-grid" style="background-color: var(--bg-subtle); position: relative; overflow: hidden;">
+      <div class="shape-arc animate-float" style="bottom: -100px; left: -100px; transform: rotate(-45deg); opacity: 0.05;"></div>
+      <div class="container">
+        <div class="grid grid-2" style="gap: 4rem;">
+          <!-- Gas Power -->
+          <div class="feature-card reveal" style="padding: 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary);">
+            <div style="height: 280px; overflow: hidden;">
+              <img src="gaxon_gas_power_delivery_1777504877862.png" alt="Gas-fired IPP development" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 3rem;">
+              <h3 style="margin-bottom: 1rem;">Gas-fired IPP development</h3>
+              <p style="font-size: 1rem;">We develop modular gas-fired power plants from 1 MW to 50 MW using compressed natural gas (CNG) or piped natural gas supply.</p>
+            </div>
           </div>
-          <div class="icon-badge">⚡</div>
-          <h3>Gas-fired IPP development</h3>
-          <p>We develop modular gas-fired power plants from 1 MW to 50 MW using compressed natural gas (CNG) or piped natural gas supply. Plants are designed for scalability — modules can be added as demand grows — and include full balance-of-plant, dedicated distribution networks, and diesel backup systems.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Utility-scale solar photovoltaic arrays" loading="lazy" />
+          
+          <!-- Solar Power -->
+          <div class="feature-card reveal" style="padding: 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary);">
+            <div style="height: 280px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000" alt="Solar power plant development" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 3rem;">
+              <h3 style="margin-bottom: 1rem;">Utility-scale solar</h3>
+              <p style="font-size: 1rem;">Gaxon develops large-scale solar photovoltaic facilities designed for government institutions and industrial clusters.</p>
+            </div>
           </div>
-          <div class="icon-badge">☀</div>
-          <h3>Utility-scale solar power plant development</h3>
-          <p>We develop large-scale solar photovoltaic power plants for government institutions, state utilities, and industrial clients across Nigeria and West Africa. Our solar projects are standalone utility-scale facilities — purpose-built power plants designed to deliver consistent, clean electricity at the scale that governments and large commercial offtakers actually require.</p>
-          <p>Projects are structured as long-term captive supply or grid-connected agreements, giving offtakers a fixed, predictable energy cost over the PPA term and giving investors a bankable, asset-backed revenue stream.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80" alt="Energy technicians performing maintenance checks" loading="lazy" />
+          
+          <!-- O&M -->
+          <div class="feature-card reveal" style="padding: 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary);">
+            <div style="height: 280px; overflow: hidden;">
+              <img src="gaxon_operations_maintenance_1777504892829.png" alt="Operations & Maintenance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 3rem;">
+              <h3 style="margin-bottom: 1rem;">Operations & Maintenance</h3>
+              <p style="font-size: 1rem;">Full-lifecycle O&M services for every facility we develop, utilizing advanced remote monitoring and predictive maintenance.</p>
+            </div>
           </div>
-          <div class="icon-badge">🛠</div>
-          <h3>Operations &amp; Maintenance</h3>
-          <p>Post-commissioning, Gaxon provides full operations and preventive maintenance services for all plants we develop.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Project finance and infrastructure planning documents" loading="lazy" />
+          
+          <!-- Project Finance -->
+          <div class="feature-card reveal" style="padding: 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary);">
+            <div style="height: 280px; overflow: hidden;">
+              <img src="gaxon_experienced_leadership_1777504709711.png" alt="Project finance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 3rem;">
+              <h3 style="margin-bottom: 1rem;">Financial Structuring</h3>
+              <p style="font-size: 1rem;">We bridge the gap between infrastructure needs and institutional capital through bankable PPP and captive energy models.</p>
+            </div>
           </div>
-          <div class="icon-badge">📈</div>
-          <h3>Project finance &amp; PPP structuring</h3>
-          <p>For government clients and development partners seeking advisory support, our team draws on deep experience in investment banking and infrastructure finance to structure PPP transactions, prepare bankable project documentation, and navigate the approval and financial close process.</p>
-        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section reveal" style="padding: 10rem 0; position: relative; overflow: hidden;">
+      <div class="bg-pattern-lines" style="position: absolute; inset: 0; opacity: 0.05;"></div>
+      <div class="shape-circle-outline animate-float" style="bottom: -50px; right: 10%; width: 300px; height: 300px;"></div>
+      <div class="container" style="text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 style="margin-bottom: 2rem;">Ready to modernize your energy infrastructure?</h2>
+          <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="button button-primary">Start a Consultation</a>
+            <a href="projects.html" class="button button-secondary">View Our Projects</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">GAXON <span>Energy</span></span>
-        </a>
-        <p class="split-note">An independent power producer developing gas and solar power infrastructure for Nigeria.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <h4>GAXON ENERGY</h4>
+          <p>An independent power producer developing gas and solar power infrastructure for Nigeria. Reliable power. Long-term partnerships. Built for Africa.</p>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h5>Company</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria.</p>
+        <p>powered by <a href="https://hardensoft.com.ng/" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: 600;">Hardensoft Digitals</a></p>
       </div>
     </div>
-    <div class="container footer-meta">© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria</div>
-    <p class="hardensoft">Powered by <a href="https://hardensoft.com.ng/" target="_blank" rel="noreferrer">Hardensoft Digitals</a></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

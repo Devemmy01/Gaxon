@@ -3,95 +3,317 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07131f" />
+  <meta name="theme-color" content="#0ea5e9" />
   <title>Projects | Gaxon Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page Specific Enhancements */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--brand-primary);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+      flex-direction: row;
+      min-height: 500px;
+    }
+
+    .project-card-image {
+      position: relative;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .project-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-slow);
+    }
+
+    .project-card:hover .project-card-image img {
+      transform: scale(1.05);
+    }
+
+    .project-card-content {
+      padding: 3rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--brand-light);
+      color: var(--brand-primary);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
+
+    .project-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-item h5 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .project-card.featured {
+        flex-direction: column;
+      }
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .impact-section {
+      background: var(--bg-accent);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+
+    .impact-item h4 {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .impact-item p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+    }
+
+    .impact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+  </style>
 </head>
-<body data-current="projects">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body>
   <header class="site-header">
-    <div class="container header-shell">
-      <a class="brand" href="index.html" aria-label="Gaxon Energy home"><span class="brand-text">GAXON <span>Energy</span></span></a>
-      <nav class="nav" data-nav>
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></button>
-        <div class="nav-links">
-          <a data-nav-link data-page="home" href="index.html">Home</a>
-          <a data-nav-link data-page="about" href="about.html">About</a>
-          <a data-nav-link data-page="services" href="services.html">Services</a>
-          <a data-nav-link data-page="projects" href="projects.html">Projects</a>
-          <a data-nav-link data-page="team" href="team.html">Team</a>
-          <a data-nav-link data-page="contact" href="contact.html">Contact</a>
-        </div>
-        <a class="nav-cta" href="contact.html">Get in Touch</a>
+    <div class="container header-container">
+      <a class="brand" href="index.html" aria-label="Gaxon Energy Home">
+        GAXON <span>ENERGY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <a class="nav-cta" href="contact.html">Get in Touch</a>
     </div>
   </header>
 
   <main id="content">
-    <section class="page-hero">
-      <div class="container reveal">
-        <span class="eyebrow">Projects</span>
-        <h1>Projects designed to perform over the long term.</h1>
-        <p class="split-note">Our portfolio is built around high-availability generation assets for public and private offtakers, structured for bankability, operational continuity, and long-term economic value.</p>
+    <section class="hero reveal">
+      <div class="bg-pattern-grid" style="position: absolute; inset: 0; opacity: 0.3;"></div>
+      <div class="shape-blob animate-float" style="top: -10%; right: -10%; width: 500px; height: 500px; opacity: 0.1;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Our Portfolio</span>
+          <h1>Infrastructure for a sustainable Nigeria.</h1>
+          <p>We are building a diverse portfolio of independent power projects designed to provide stable, long-term energy security for our partners.</p>
+        </div>
+
+        <div class="project-grid">
+          
+          <!-- Featured Project: Rivers State IPP -->
+          <div class="project-card featured reveal">
+            <div class="project-card-image">
+              <img src="gaxon_rivers_ipp.png" alt="Rivers State IPP" />
+            </div>
+            <div class="project-card-content">
+              <span class="eyebrow">In Development</span>
+              <h3>Rivers State Independent Power Plant</h3>
+              <p>A flagship modular gas-fired power facility dedicated to providing clean, stable electricity to state institutions and public infrastructure in Port Harcourt.</p>
+              
+              <div class="project-stats">
+                <div class="stat-item">
+                  <h5>Capacity</h5>
+                  <p>10 MW</p>
+                </div>
+                <div class="stat-item">
+                  <h5>Fuel</h5>
+                  <p>Natural Gas</p>
+                </div>
+                <div class="stat-item">
+                  <h5>Status</h5>
+                  <p>Active</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Solar IPP Development Programme -->
+          <div class="project-card featured reverse reveal">
+            <div class="project-card-content">
+              <span class="eyebrow">Proposal Stage</span>
+              <h3>Solar IPP Development Programme</h3>
+              <p>Gaxon is developing a pipeline of utility-scale solar power plant projects across Nigeria and West Africa.</p>
+              <p style="font-size: 0.95rem; opacity: 0.8;">Built on the conviction that Africa's solar resource should be developed at scale with international technical standards and long-term operational commitment.</p>
+              
+              <div class="project-stats">
+                <div class="stat-item">
+                  <h5>Status</h5>
+                  <p>Proposal</p>
+                </div>
+                <div class="stat-item">
+                  <h5>Region</h5>
+                  <p>West Africa</p>
+                </div>
+                <div class="stat-item">
+                  <h5>Focus</h5>
+                  <p>Utility</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-image">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1200" alt="Solar Project" />
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid-2">
-        <article class="project-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80" alt="Power transmission and energy infrastructure supporting city services" loading="lazy" />
-          </div>
-          <span class="microcopy">Independent Power Plant</span>
-          <h3>Rivers State Independent Power Plant</h3>
-          <p>Status: In development</p>
-          <p>Capacity: 10 MW</p>
-          <p>Fuel: Compressed Natural Gas (CNG) / Natural Gas</p>
-          <p>A modular gas-fired project being developed to supply critical public infrastructure in Port Harcourt under a long-term PPA.</p>
-        </article>
-        <article class="project-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1200&q=80" alt="Large solar farm in high sunlight conditions" loading="lazy" />
-          </div>
-          <span class="microcopy">Solar programme</span>
-          <h3>Solar IPP Development Programme</h3>
-          <p>Status: Proposal stage · Nigeria and West Africa</p>
-          <p>Gaxon is developing a pipeline of utility-scale solar power plant projects across Nigeria and West Africa.</p><br>
-          <p>Africa's solar resource is among the richest in the world. Gaxon's solar programme is built on the conviction that this resource should be developed at the scale the continent requires — with the same technical standards, financial discipline, and long-term operational commitment that governs our gas portfolio. <br><br>Government institutions, state agencies, and commercial clients interested in a solar power supply proposal are welcome to contact our team for a feasibility discussion.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container project-hero reveal">
+    <!-- Development Framework Section -->
+    <section class="section bg-pattern-grid" style="position: relative; overflow: hidden; background: var(--bg-subtle);">
+      <div class="shape-arc animate-float" style="top: 10%; right: -50px; opacity: 0.05;"></div>
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">The Gaxon Model</span>
+          <h2>Our Development Framework</h2>
+          <p>We manage the entire project lifecycle, from initial site identification to long-term operations.</p>
+        </div>
         
-        <div class="feature-card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Infrastructure planning and project structuring session" loading="lazy" />
+        <div class="grid grid-3">
+          <div class="feature-card reveal">
+            <div class="icon-box">01</div>
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Feasibility</h4>
+            <p style="font-size: 1rem;">Rigorous technical and financial assessment to ensure project viability and bankability.</p>
           </div>
-          <h3>Structured for scale.</h3>
-          <p>We focus on long-term captive supply and grid-connected structures that can support real institutional demand and durable investor returns.</p>
+          <div class="feature-card reveal">
+            <div class="icon-box">02</div>
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Structuring</h4>
+            <p style="font-size: 1rem;">Expert legal and financial engineering, including PPA negotiation and fuel supply security.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="icon-box">03</div>
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Execution</h4>
+            <p style="font-size: 1rem;">Managing procurement, construction, and commissioning to international standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section reveal" style="padding: 10rem 0; background: var(--bg-subtle); position: relative; overflow: hidden;">
+      <div class="shape-circle-outline" style="bottom: -100px; right: -100px; width: 300px; height: 300px;"></div>
+      <div class="container" style="text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 style="margin-bottom: 2rem;">Ready to discuss your energy needs?</h2>
+          <p style="margin-bottom: 3rem;">Whether you are a government representative or an industrial leader, we have the expertise to deliver the power you need.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+            <a href="contact.html" class="button button-primary">Contact Our Team</a>
+            <a href="services.html" class="button button-secondary">Explore Services</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">GAXON <span>Energy</span></span>
-        </a>
-        <p class="split-note">An independent power producer developing gas and solar power infrastructure for Nigeria.</p>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <h4>GAXON ENERGY</h4>
+          <p>An independent power producer developing gas and solar power infrastructure for Nigeria. Reliable power. Long-term partnerships. Built for Africa.</p>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h5>Company</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+       <p>© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria.</p>
+        <p>powered by <a href="https://hardensoft.com.ng/" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: 600;">Hardensoft Digitals</a></p>
       </div>
     </div>
-    <div class="container footer-meta">© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria</div>
-    <p class="hardensoft">Powered by <a href="https://hardensoft.com.ng/" target="_blank" rel="noreferrer">Hardensoft Digitals</a></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

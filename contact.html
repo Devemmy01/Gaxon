@@ -3,77 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07131f" />
-  <title>Contact | Gaxon Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>Contact Us | Gaxon Energy</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-current="contact">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body>
   <header class="site-header">
-    <div class="container header-shell">
-      <a class="brand" href="index.html" aria-label="Gaxon Energy home"><span class="brand-text">GAXON <span>Energy</span></span></a>
-      <nav class="nav" data-nav>
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></button>
-        <div class="nav-links">
-          <a data-nav-link data-page="home" href="index.html">Home</a>
-          <a data-nav-link data-page="about" href="about.html">About</a>
-          <a data-nav-link data-page="services" href="services.html">Services</a>
-          <a data-nav-link data-page="projects" href="projects.html">Projects</a>
-          <a data-nav-link data-page="team" href="team.html">Team</a>
-          <a data-nav-link data-page="contact" href="contact.html">Contact</a>
-        </div>
-        <a class="nav-cta" href="contact.html">Get in Touch</a>
+    <div class="container header-container">
+      <a class="brand" href="index.html" aria-label="Gaxon Energy Home">
+        GAXON <span>ENERGY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
+      <a class="nav-cta" href="contact.html">Get in Touch</a>
     </div>
   </header>
 
   <main id="content">
-    <section class="page-hero">
-      <div class="container reveal">
-        <span class="eyebrow">Contact</span>
-        <h1>Let's build something that lasts.</h1>
-        <p class="split-note">Whether you represent a government institution seeking a reliable power supply, a commercial client exploring captive energy solutions, or an investor looking for infrastructure opportunities in Nigeria — we welcome your enquiry at any stage.</p>
+    <section class="hero reveal" style="position: relative; overflow: hidden;">
+      <div class="shape-arc" style="bottom: -100px; left: -100px; width: 300px; height: 300px; border-width: 20px; opacity: 0.1;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Let's build something that lasts.</h1>
+          <p>Whether you represent a government institution seeking a reliable power supply, a commercial client exploring captive energy solutions, or an investor looking for infrastructure opportunities in Nigeria — we welcome your enquiry at any stage.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container contact-panel">
-        <article class="contact-card reveal">
-          <h3>Contact details</h3>
-          <ul class="contact-list">
-            <li><strong>Address:</strong> Plot 5, Chief Yesuf Abiodun Way, Victoria Island, Lagos, Nigeria</li>
-            <li><strong>Phone:</strong> <a href="tel:+2348182198676">+234 818 2198 676</a></li>
-            <li><strong>Email:</strong> <a href="mailto:info@gaxon.com">info@gaxon.com</a></li>
-            <li><strong>Website:</strong> <a href="https://www.gaxon.com" target="_blank" rel="noreferrer">www.gaxon.com</a></li>
-          </ul>
-        </article>
-        <article class="contact-card reveal">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1200&q=80" alt="Professional meeting for energy project planning" loading="lazy" />
+    <section class="section bg-pattern-grid">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 4rem;">
+          <div class="reveal">
+            <h2 style="margin-bottom: 2rem;">Contact details</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem;">
+              <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+                
+                <div>
+                  <h4 style="margin-bottom: 0.5rem;">Address</h4>
+                  <p style="font-size: 1rem;">Plot 5, Chief Yesuf Abiodun Way, Victoria Island, Lagos, Nigeria</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+                
+                <div>
+                  <h4 style="margin-bottom: 0.5rem;">Phone</h4>
+                  <p style="font-size: 1rem;">+234 818 2198 676</p>
+          <span class="eyebrow">Contact Us</span>
+          <h1>Let's build the future of energy together.</h1>
+          <p>Whether you are a government agency, an industrial offtaker, or a potential investor, our team is ready to discuss your energy infrastructure needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-pattern-grid" style="background-color: var(--bg-subtle); position: relative; overflow: hidden;">
+      <div class="shape-arc animate-float" style="bottom: -100px; left: -100px; transform: rotate(-45deg); opacity: 0.05;"></div>
+      <div class="container">
+        <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+          <div class="reveal">
+            <h2 style="margin-bottom: 2rem;">Lagos Office</h2>
+            <div class="feature-card" style="background: var(--bg-secondary); margin-bottom: 2rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Main Headquarters</h3>
+              <p style="font-size: 1rem; margin-bottom: 0.5rem;">Plot 123, Admiralty Way</p>
+              <p style="font-size: 1rem; margin-bottom: 1.5rem;">Lekki Phase 1, Lagos, Nigeria</p>
+              <a href="mailto:info@gaxon.com" style="color: var(--brand-primary); font-weight: 700;">info@gaxon.com</a>
+            </div>
+            <img src="gaxon_operations_maintenance_1777504892829.png" alt="Gaxon Infrastructure" style="width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius-lg);" />
           </div>
-          <h3>Start the conversation</h3>
-          <p>Share your project goals and timeline, and our team will schedule a feasibility discussion with the right technical and finance leads.</p>
-        </article>
+          
+          <div class="reveal">
+            <h2 style="margin-bottom: 2rem;">Ready to partner</h2>
+            <p style="font-size: 1.125rem; opacity: 0.8; margin-bottom: 2.5rem;">Gaxon Energy is committed to building long-term energy infrastructure across Nigeria. Reach out to our team to discuss project development, partnerships, or procurement.</p>
+            <div class="feature-card" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+              <h3 style="margin-bottom: 1rem;">Direct Contact</h3>
+              <p style="margin-bottom: 2rem; font-size: 1rem;">For immediate enquiries, please contact our development desk via email.</p>
+              <a href="mailto:info@gaxon.com" class="button button-primary">Email info@gaxon.com</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">GAXON <span>Energy</span></span>
-        </a>
-        <p class="split-note">An independent power producer developing gas and solar power infrastructure for Nigeria.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <h4>GAXON ENERGY</h4>
+          <p>An independent power producer developing gas and solar power infrastructure for Nigeria. Reliable power. Long-term partnerships. Built for Africa.</p>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h5>Company</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria.</p>
+        <p>powered by <a href="https://hardensoft.com.ng/" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: 600;">Hardensoft Digitals</a></p>
       </div>
     </div>
-    <div class="container footer-meta">© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria</div>
-    <p class="hardensoft">Powered by <a href="https://hardensoft.com.ng/" target="_blank" rel="noreferrer">Hardensoft Digitals</a></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,112 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07131f" />
-  <title>About | Gaxon Energy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>About Us | Gaxon Energy</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-current="about">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body>
   <header class="site-header">
-    <div class="container header-shell">
-      <a class="brand" href="index.html" aria-label="Gaxon Energy home"><span class="brand-text">GAXON <span>Energy</span></span></a>
-      <nav class="nav" data-nav>
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></button>
-        <div class="nav-links">
-          <a data-nav-link data-page="home" href="index.html">Home</a>
-          <a data-nav-link data-page="about" href="about.html">About</a>
-          <a data-nav-link data-page="services" href="services.html">Services</a>
-          <a data-nav-link data-page="projects" href="projects.html">Projects</a>
-          <a data-nav-link data-page="team" href="team.html">Team</a>
-          <a data-nav-link data-page="contact" href="contact.html">Contact</a>
-        </div>
-        <a class="nav-cta" href="contact.html">Get in Touch</a>
+    <div class="container header-container">
+      <a class="brand" href="index.html" aria-label="Gaxon Energy Home">
+        GAXON <span>ENERGY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <a class="nav-cta" href="contact.html">Get in Touch</a>
     </div>
   </header>
 
   <main id="content">
-    <section class="page-hero">
-      <div class="container story-grid reveal">
-        <div>
-          <span class="eyebrow">About Gaxon</span>
-          <h1>A decade of energy infrastructure development in Nigeria.</h1>
+    <section class="hero reveal">
+      <div class="bg-pattern-grid" style="position: absolute; inset: 0; opacity: 0.3;"></div>
+      <div class="shape-blob animate-float" style="top: -10%; left: -10%; width: 500px; height: 500px; opacity: 0.1;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Our Story</span>
+          <h1>A decade of energy infrastructure development.</h1>
           <p>Gaxon Energy is a Nigerian independent power producer and energy infrastructure developer, incorporated in 2014. We specialise in the development, financing, construction, and operation of off-grid and captive power plants serving government and commercial clients across Nigeria.</p>
-          <div class="media-wrap" style="margin-top: 1rem;">
-            <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1400&q=80" alt="Large scale energy infrastructure in an urban setting" loading="lazy" />
-          </div>
         </div>
-        <div class="timeline-card">
-          <span class="microcopy">Our mission</span>
-          <h3>Closing Africa's infrastructure gap.</h3>
-          <p>We develop reliable, technology-proven independent power plants — delivered on time, financed efficiently, and operated to global standards.</p>
-          <ul>
-            <li><strong>Model:</strong> Build-Own-Operate under Public-Private Partnership frameworks.</li>
-            <li><strong>Focus:</strong> Government, commercial, and industrial offtakers.</li>
-            <li><strong>Standard:</strong> Bankable delivery and disciplined operations.</li>
-          </ul>
+        
+        <div class="hero-grid">
+          <div class="hero-image-main">
+            <img src="gaxon_experienced_leadership_1777504709711.png" alt="Gaxon Team" style="border-radius: var(--radius-lg);" />
+          </div>
+          <div class="" style="background-color: white; color: #0b1120ff; padding: 2rem; border-radius: 1rem; box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1); height: fit-content;">
+            <div class="shape-circle-outline" style="top: -20px; right: -20px; width: 100px; height: 100px;"></div>
+            <h3 style="color: var(--brand-primary); margin-bottom: 1rem;">Our mission</h3>
+            <p style="font-size: 1rem;">To close Africa’s Infrastructure gap by developing reliable, technology-proven independent power plants — delivered on time, financed efficiently, and operated to global standards.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section bg-pattern-grid" style="background: var(--bg-subtle); position: relative; overflow: hidden;">
+      <div class="shape-arc animate-float" style="top: 10%; right: -50px; opacity: 0.05;"></div>
       <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">Our values</span>
-            <h2>We measure ourselves against the best in the world.</h2>
-          </div>
-          <p>Africa's energy transition demands more than projects. It demands a standard.</p>
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Our Values</span>
+          <h2>A standard of excellence</h2>
+          <p>Africa's energy transition demands more than projects. It demands a standard that we uphold in every megawatt we deliver.</p>
         </div>
-        <div class="value-grid">
-          <article class="value-card reveal">
-            <div class="card-image">
-              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80" alt="Engineers reviewing a utility-scale energy site" loading="lazy" />
-            </div>
-            <h3>Excellence in execution.</h3>
-            <p>We apply the same engineering rigour and project management discipline that governs power development in the world's most demanding markets. From feasibility through to commercial operation, every phase is held to international benchmarks — because the cost of underperformance in power infrastructure is measured in lives, livelihoods, and lost productivity.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3>Integrity in every transaction.</h3>
-            <p>The energy sector in Africa has a long history of projects that were announced and never delivered. We hold ourselves to a different standard — one built on transparent structuring, honest feasibility, and commitments we keep. Our partners and offtakers know exactly what they are getting before they sign.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3>Technology that works.</h3>
-            <p>We are technology-agnostic in principle but uncompromising in quality. Whether gas or solar, every generation asset we deploy is selected for proven performance, field-tested reliability, and suitability for the African operating environment — not lowest cost at the point of procurement.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3>Resilience by design.</h3>
-            <p>Africa's energy infrastructure cannot afford fragility. We build redundancy into every project — backup systems, fuel supply contingencies, and O&amp;M protocols that keep plants running when conditions are difficult. Reliability is not a feature. It is the product.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3>Impact at scale.</h3>
-            <p>We are not building small. Gaxon's ambition is to contribute meaningfully to Africa's energy capacity — developing projects that power government institutions, anchor industrial activity, and create long-term employment. Every megawatt we commission is a step toward a continent that no longer tolerates energy poverty as an inevitability.</p>
-          </article>
-          <article class="value-card reveal">
-            <h3>Partnership over transaction.</h3>
-            <p>We treat every engagement as a long-term operating relationship, not a one-time contract. That mindset shapes how we negotiate, build, communicate, and deliver.</p>
-          </article>
+        
+        <div class="grid grid-2">
+          <div class="feature-card reveal">
+            <h3 style="color: var(--brand-primary); margin-bottom: 1rem;">Excellence in execution</h3>
+            <p style="font-size: 1rem;">We apply international engineering rigour and project management discipline to every phase, from feasibility to commercial operation.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3 style="color: var(--brand-primary); margin-bottom: 1rem;">Integrity in every transaction</h3>
+            <p style="font-size: 1rem;">We build trust through transparent structuring, honest feasibility assessments, and commitments we keep.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3 style="color: var(--brand-primary); margin-bottom: 1rem;">Technology that works</h3>
+            <p style="font-size: 1rem;">Every asset we deploy is selected for field-tested reliability and suitability for the African operating environment.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3 style="color: var(--brand-primary); margin-bottom: 1rem;">Resilience by design</h3>
+            <p style="font-size: 1rem;">We build redundancy into every project, ensuring plants keep running even when conditions are difficult.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="position: relative; overflow: hidden;">
+      <div class="bg-pattern-lines" style="position: absolute; inset: 0; opacity: 0.05;"></div>
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+          <div class="hero-image-main reveal" style="position: relative;">
+            <div class="shape-arc" style="top: -50px; left: -50px; width: 200px; height: 200px; border-width: 10px;"></div>
+            <img src="gaxon_gas_power_delivery_1777504877862.png" alt="Impact at scale" style="border-radius: var(--radius-lg);" />
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Impact at scale</span>
+            <h2>Powering progress</h2>
+            <p>We are not building small. Gaxon's ambition is to contribute meaningfully to Africa's energy capacity — developing projects that power government institutions and anchor industrial activity.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">GAXON <span>Energy</span></span>
-        </a>
-        <p class="split-note">An independent power producer developing gas and solar power infrastructure for Nigeria.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <h4>GAXON ENERGY</h4>
+          <p>An independent power producer developing gas and solar power infrastructure for Nigeria. Reliable power. Long-term partnerships. Built for Africa.</p>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h5>Company</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria.</p>
+        <p>powered by <a href="https://hardensoft.com.ng/" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: 600;">Hardensoft Digitals</a></p>
       </div>
     </div>
-    <div class="container footer-meta">© 2026 Gaxon Energy. All rights reserved. Registered in Nigeria</div>
-    <p class="hardensoft">Powered by <a href="https://hardensoft.com.ng/" target="_blank" rel="noreferrer">Hardensoft Digitals</a></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
